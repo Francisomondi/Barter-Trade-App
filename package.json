@@ -1,0 +1,17 @@
+{
+  "name": "bartertradeapp",
+  "version": "1.0.0",
+  "description": "a trading app where one can trade for what they have with what they need\\A",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "barter",
+    "trade",
+    "crud",
+    "mongodb"
+  ],
+  "author": "Francis Aziz",
+  "license": "ISC"
+}
