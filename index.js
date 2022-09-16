@@ -19,7 +19,7 @@ const categorySchema = new mongoose.Schema({
 
 const Category = mongoose.model("Category", categorySchema)
 
-
+//create caTEGORY
 const createCategory = async () => {
     const category = new Category({
         name: "Phones & Tablets",
@@ -31,10 +31,23 @@ const createCategory = async () => {
     console.log(result)
 }
 
+//get categories
 const getCategories = async () => {
 
-    const category = await Category.find()
-    console.log(category)
-
+    const categories = await Category.find()
+    console.log(categories)
 }
-getCategories()
+
+//updating courses
+const updateCategory = async (id) => {
+    const updateCategory = await Category.findById(id)
+    if (!updateCategory) return;
+
+    updateCategory.name = "an enemy of the people",
+        updateCategory.tags = ["dr stockman", "peter stockman"],
+        updateCategory.isPublished = true
+
+    const result = await updateCategory.save()
+    console.log(result)
+}
+updateCategory("6324c8f4f169f5c47757fbfe")
