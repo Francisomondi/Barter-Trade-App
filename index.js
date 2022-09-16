@@ -18,14 +18,23 @@ const categorySchema = new mongoose.Schema({
 })
 
 const Category = mongoose.model("Category", categorySchema)
+
+
 const createCategory = async () => {
     const category = new Category({
-        name: "Fashion & Beauty",
-        tags: ["beauty", "fashion"],
+        name: "Phones & Tablets",
+        tags: ["Android", "IOS", "Windows"],
         isPublished: true
     })
 
     const result = await category.save()
     console.log(result)
 }
-createCategory()
+
+const getCategories = async () => {
+
+    const category = await Category.find()
+    console.log(category)
+
+}
+getCategories()
