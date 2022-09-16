@@ -13,5 +13,8 @@
     "mongodb"
   ],
   "author": "Francis Aziz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.6.1"
+  }
 }
