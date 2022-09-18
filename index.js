@@ -50,4 +50,13 @@ const updateCategory = async (id) => {
     const result = await updateCategory.save()
     console.log(result)
 }
-updateCategory("6324c8f4f169f5c47757fbfe")
+
+//delete Category
+const deleteCategory = async (id) => {
+    const result = await Category.deleteOne({
+        _id: id
+    })
+
+    console.log(result)
+}
+deleteCategory("6324c8f4f169f5c47757fbfe")
